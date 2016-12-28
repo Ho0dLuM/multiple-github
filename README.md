@@ -9,7 +9,7 @@ Let's say we are setting up these two Github accounts for _WORK_ and _PERSONAL_.
 
 We will need to create our two SSH keys, and save them each to a separate file:
 
-```
+``
 1. $ cd ~/.ssh
    * If no .ssh file exists in your /home directory, go ahead and create that directory with:
      $ take .ssh (Mac)
@@ -18,7 +18,7 @@ We will need to create our two SSH keys, and save them each to a separate file:
 3. When you're prompted to "Enter a password", this is to protect the private key that is generated. Press enter to skip (not recommended) or choose a password. If you try to access that private ssh key it will prompt you for the password you chose when you created it (Do not share your Private Key).
 4. $ ssh-keygen -t rsa -b 4096 -C WORK
 5. $ ssh-keygen -t rsa -b 4096 -C PERSONAL
-```
+``
 The above commands will create the following files in the .ssh folder:
 
 * WORK
@@ -29,3 +29,5 @@ The above commands will create the following files in the .ssh folder:
 Open the WORK.pub and PERSONAL.pub files in a text editor.
 
 ## Add the keys to your Github accounts:
+
+1. Sign in to one of the accounts
