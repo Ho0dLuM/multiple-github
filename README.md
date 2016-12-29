@@ -45,12 +45,14 @@ Open the WORK.pub and PERSONAL.pub files in a text editor.
 > _Note: You will need to be inside the .ssh directory._
 
 __Create Config File__
+
 ```
 1. $ touch config
 2. open config file in a text editor
 ```
 
 __Edit Config File__
+
 ```
 #PERSONAL account
 Host github.com-PERSONAL
@@ -64,4 +66,5 @@ Host github.com-WORK
   User git
   IdentityFile ~/.ssh/WORK
 ```
-This is how your config file inside the .ssh directory should look. 
+
+This is how your config file inside the .ssh directory should look.
