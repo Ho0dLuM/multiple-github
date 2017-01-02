@@ -2,7 +2,7 @@
 
 This post will guide you through setting up and managing multiple Github accounts from one computer. We will be configuring and using ssh to accomplish this.
 
-> _Note: This tutorial is for Unix and Linux users._
+> _Note: This tutorial is for Mac and Ubuntu users._
 
 ## Set Up SSH Keys
 Let's say we are setting up these two Github accounts for _WORK_ and _PERSONAL_.
@@ -62,9 +62,39 @@ Host github.com-PERSONAL
 
 #WORK account
 Host github.com-WORK
-  HostName github.com-WORK
+  HostName github.com
   User git
   IdentityFile ~/.ssh/WORK
 ```
 
 This is how your config file inside the .ssh directory should look.
+
+## PUSH
+
+1. Navigate to [Github](http://github.com) and sign in to your Personal account, from there create a new repository called _test-personal_.
+2. On your local computer, create a test directory.
+```
+$ cd ~/documents
+$ take or mkdir test-personal
+```
+3. Add a README.md and push to Github
+> Note: On step 3 when adding the remote we are adding -PERSONAL.
+
+```
+$ touch README.md
+$ git init
+$ git remote add origin git@github.com-PERSONAL:accountName/test-personal.git
+$ git add .
+$ git commmit -m 'initial commit'
+$ git push origin master
+```
+4. Repeat this process for your githubWork account.
+
+## PULL
+
+1. Add some text to the README.md file from your personal account on [Github](http://github.com).
+2.  PULL down these new changes from your local computer.
+```
+$ git pull origin master
+```
+3. Repeat this process for your githubWork account.
