@@ -17,10 +17,12 @@ We will need to create our two SSH keys, and save them each to a separate file:
      $ take .ssh (Mac)
      $ mkdir .ssh && cd .ssh (Ubuntu)
 2. When you're prompted to "Enter a file in which to save the key" use the same name as during the command, WORK or PERSONAL.
-3. When you're prompted to "Enter a password", this is to protect the private key that is generated. Press enter to skip (not recommended) or choose a password. If you try to access that private ssh key it will prompt you for the password you chose when you created it (Do not share your Private Key).
+3. When you're prompted to "Enter a password", this is to protect the private key that is generated. Press enter to skip (not recommended) or choose a password.
 4. $ ssh-keygen -t rsa -b 4096 -C WORK
 5. $ ssh-keygen -t rsa -b 4096 -C PERSONAL
 ```
+> Note: If you try to access that private ssh key it will prompt you for the password you chose when you created it (Do not share your Private Key).
+
 The above commands will create the following files in the .ssh folder:
 
 * WORK
